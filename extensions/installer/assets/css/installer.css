@@ -1,6 +1,6 @@
 /*! undefined undefined | undefined | (c) 2013 YOOtheme | MIT License */
 
-@import 'https://fonts.useso.com/css?family=Open+Sans:300,400,600';
+@import 'http://fonts.useso.com/css?family=Open+Sans:300,400,600';
 /* ========================================================================
    Component: Normalize
  ========================================================================== */
@@ -457,7 +457,7 @@ img {
 .uk-img-preserve,
 .uk-img-preserve img,
 img[src*="maps.gstatic.com"],
-img[src*="googleapis.com"] {
+img[src*="useso.com"] {
   max-width: none;
 }
 /* Spacing for block elements

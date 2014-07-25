@@ -1,6 +1,6 @@
 /*! Alpha 0.8.0 | undefined | (c) 2014 Pagekit | MIT License */
 
-@import 'https://fonts.useso.com/css?family=Open+Sans:300,400,600';
+@import 'http://fonts.useso.com/css?family=Open+Sans:300,400,600';
 	html {
 	font-family:sans-serif;
 	-webkit-text-size-adjust:100%;
@@ -193,7 +193,7 @@ img {
 	box-sizing:border-box;
 	vertical-align:middle
 }
-.uk-img-preserve,.uk-img-preserve img,img[src*="maps.gstatic.com"],img[src*="googleapis.com"] {
+.uk-img-preserve,.uk-img-preserve img,img[src*="maps.gstatic.com"],img[src*="useso.com"] {
 	max-width:none
 }
 p,hr,ul,ol,dl,blockquote,pre,address,fieldset,figure {
