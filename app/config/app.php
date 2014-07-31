@@ -4,15 +4,15 @@ return [
 
     'app' => [
 
-        'version' => '0.8.3',
+        'version' => '0.8.4',
 
         'debug' => true,
 
         'timezone' => 'UTC',
 
-        'locale' => 'zh_CN',
+        'locale' => 'en_US',
 
-        'locale_admin' => 'zh_CN',
+        'locale_admin' => 'en_US',
 
         'storage' => '/storage',
 

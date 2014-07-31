@@ -1,30 +1,30 @@
 # Pagekit
 
-一个构建在 Symfony 基础上的模块化、轻量级CMS。
+A modular and lightweight CMS built with Symfony components
 
-* 主页: [http://www.pagekit.com/](http://www.pagekit.com/) - 了解更多关于 Pagekit 的信息
-* Twitter: [@pagekit](https://twitter.com/pagekit) - 获取最新信息
-* IssueTracker: - [Issues](http://github.com/pagekit/pagekit/issues) - 在此反馈BUG
-* 开发者交流: #pagekit on irc.freenode.net
-
-非官方中文文档以及Pagekit 中文版本由[Pagekit.me](http://www.pagekit.me/)提供，感谢三位：@PCDotFan @Deamwork Tech. @Panni_007
-
-## 快速入门
-
-下载 [最新发布版本](http://www.pagekit.com/download) 并解压后将内容复制到需使用的网站服务器目录下。
-下一件事，我们需要用类似于 phpMyAdmin 的工具创建一个为 Pagekit 专门使用的空数据库。如果你的主机仅允许创建一个数据库，并且此数据库已有其他程序在正常使用，你同样可以设置与其不同的表前缀(Pagekit prefixes)以避免冲突。
+* Homepage: [http://www.pagekit.com/](http://www.pagekit.com/) - Learn more about Pagekit
+* Twitter: [@pagekit](https://twitter.com/pagekit) - Get the latest news
+* IssueTracker: - [Issues](http://github.com/pagekit/pagekit/issues) - Report bugs here
+* Developer Chat: #pagekit on irc.freenode.net
 
 
-## 开发者
+## Getting started
 
-首先，安装 [Composer](https://getcomposer.org/doc/00-intro.md#installation-nix).
+Download the [latest release](http://www.pagekit.com) and extract the archive, then copy the extracted folder to your webserver.
+Create a database for Pagekit.
+Run the Pagekit installation by accessing the URL where you uploaded the Pagekit files in a browser.
 
-如果你还没有这样做，请Clone the Pagekit git repo.
+
+## Developers
+
+First of all, install [Composer](https://getcomposer.org/doc/00-intro.md#installation-nix).
+
+If you haven't done so already, clone the Pagekit git repo.
 ```
 git clone git://github.com/pagekit/pagekit.git
 ```
 
-若需要安装项目依赖库，请专项被克隆的目录并执行composer `install`命令。
+To install the dependencies of the project, navigate to the cloned directory and run the composer `install` command
 ```
 composer install
 #or if you don't have composer installed globally:
@@ -38,16 +38,15 @@ git pull
 composer update
 ```
 
-你同样需要清空 `app/cache` 目录内所有内容。
+You may also clear the `app/cache` folder.
 
 ### CLI
 
-Pagekit 提供一组命令用于执行日常任务。你可以输入 `./pagekit --help` 查看目前可用的所有命令。
+Pagekit offers a set of commands to run usual tasks on the command line. You can see the available commands with
 ```
 ./pagekit --help
 ```
-
-在此可以找到关于命令行工具的进一步信息 [Pagekit 中文文档](http://www.pagekit.me/docs/quickstart)
+You can find further information about the command line tools in the [pagekit documentation](http://www.pagekit.com/docs/quickstart)
 
 
 ## Copyright and license

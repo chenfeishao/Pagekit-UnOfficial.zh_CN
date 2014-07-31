@@ -273,6 +273,10 @@ abstract class ParserAbstract
         return $expected;
     }
 
+    /*
+     * Tracing functions used for debugging the parser.
+     */
+
     protected function traceNewState($state, $symbol) {
         echo '% State ' . $state
             . ', Lookahead ' . ($symbol == self::SYMBOL_NONE ? '--none--' : $this->symbolToName[$symbol]) . "\n";
@@ -292,5 +296,72 @@ abstract class ParserAbstract
 
     protected function traceReduce($n) {
         echo '% Reduce by (' . $n . ') ' . $this->productions[$n] . "\n";
+    }
+
+    /*
+     * Helper functions invoked by semantic actions
+     */
+
+    /**
+     * Moves statements of semicolon-style namespaces into $ns->stmts and checks various error conditions.
+     *
+     * @param Node[] $stmts
+     * @return Node[]
+     */
+    protected function handleNamespaces(array $stmts) {
+        $style = $this->getNamespacingStyle($stmts);
+        if (null === $style) {
+            // not namespaced, nothing to do
+            return $stmts;
+        } elseif ('brace' === $style) {
+            // For braced namespaces we only have to check that there are no invalid statements between the namespaces
+            $afterFirstNamespace = false;
+            foreach ($stmts as $stmt) {
+                if ($stmt instanceof Node\Stmt\Namespace_) {
+                    $afterFirstNamespace = true;
+                } elseif (!$stmt instanceof Node\Stmt\HaltCompiler && $afterFirstNamespace) {
+                    throw new Error('No code may exist outside of namespace {}', $stmt->getLine());
+                }
+            }
+            return $stmts;
+        } else {
+            // For semicolon namespaces we have to move the statements after a namespace declaration into ->stmts
+            $resultStmts = array();
+            $targetStmts =& $resultStmts;
+            foreach ($stmts as $stmt) {
+                if ($stmt instanceof Node\Stmt\Namespace_) {
+                    $stmt->stmts = array();
+                    $targetStmts =& $stmt->stmts;
+                    $resultStmts[] = $stmt;
+                } elseif ($stmt instanceof Node\Stmt\HaltCompiler) {
+                    // __halt_compiler() is not moved into the namespace
+                    $resultStmts[] = $stmt;
+                } else {
+                    $targetStmts[] = $stmt;
+                }
+            }
+            return $resultStmts;
+        }
+    }
+
+    private function getNamespacingStyle(array $stmts) {
+        $style = null;
+        $hasNotAllowedStmts = false;
+        foreach ($stmts as $stmt) {
+            if ($stmt instanceof Node\Stmt\Namespace_) {
+                $currentStyle = null === $stmt->stmts ? 'semicolon' : 'brace';
+                if (null === $style) {
+                    $style = $currentStyle;
+                    if ($hasNotAllowedStmts) {
+                        throw new Error('Namespace declaration statement has to be the very first statement in the script', $stmt->getLine());
+                    }
+                } elseif ($style !== $currentStyle) {
+                    throw new Error('Cannot mix bracketed namespace declarations with unbracketed namespace declarations', $stmt->getLine());
+                }
+            } elseif (!$stmt instanceof Node\Stmt\Declare_ && !$stmt instanceof Node\Stmt\HaltCompiler) {
+                $hasNotAllowedStmts = true;
+            }
+        }
+        return $style;
     }
 }
