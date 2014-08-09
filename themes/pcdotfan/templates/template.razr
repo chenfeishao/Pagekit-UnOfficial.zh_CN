@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="@url('extension://system/theme/favicon.ico')" rel="shortcut icon" type="image/x-icon">
+        <link href="@url('extension://system/theme/apple_touch_icon.png')" rel="apple-touch-icon-precomposed">
+        @section('head')
+        @style('pcdotfan', 'theme://pcdotfan/css/theme.css') 
+        @script('jquery')
+        @script('theme-js','theme://pcdotfan/js/theme.js')
+        @script('uikit')
+    </head>
+    <body>
+        <div class="uk-hidden">
+</div>
+<div class="tm-navbar " data-uk-sticky="{media: 767, target: true}">
+    <div class="uk-container uk-container-center">
+        <nav class="uk-navbar">
+            <a class="uk-navbar-brand uk-hidden-small" href="/">
+                <div class="tm-logo">
+                </div>
+            </a>
+            <div class="uk-navbar-flip uk-hidden-small">
+                @if (hasSection('navbar'))
+                    @section('navbar', ['renderer' => 'navbar'])
+                @endif
+                <div class="uk-navbar-content">
+                    <a class="uk-button uk-button-primary" href="http://www.pagekit.me">
+                        首页
+                    </a>
+                </div>
+            </div>
+            <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas>
+            </a>
+            <a class="uk-navbar-brand uk-navbar-center uk-visible-small" href="/">
+                <div class="tm-logo-small">
+                </div>
+            </a>
+        </nav>
+         </div>
+        </div>
+        <div class="tm-block">
+    <div class="uk-container uk-container-center">
+        <div class="tm-main uk-grid uk-grid-divider" data-uk-grid-margin data-uk-grid-match>
+            <div class="tm-main uk-width-medium-1-1 tm-content">
+                <div class="tm-container-blog">
+                    @if (hasSection('content'))
+                        @section('content', ['renderer' => 'content'])
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tm-block tm-block-dark">
+    <div class="uk-container uk-container-center">
+        <div class="uk-panel ">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-medium-1-2 tm-text-center">
+                            Made by
+                            <a href="http://www.yootheme.com/">
+                                YOOtheme
+                            </a>
+                            with love and caffeine. <br> Pagekit 非官方中文站愿意为 Pagekit 中文发展尽一份微薄之力！
+                </div>
+                <div class="uk-width-medium-1-2">
+                    <ul class="uk-subnav uk-margin-remove tm-text-right tm-text-center">
+                        <li>
+                            <a href="https://github.com/pagekit">
+                                <i class="uk-icon-github uk-icon-small">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/pagekit">
+                                <i class="uk-icon-twitter uk-icon-small">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/communities/104125443335488004107">
+                                <i class="uk-icon-google-plus uk-icon-small">
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="offcanvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-side uk-nav-offcanvas">
+            @if (hasSection('navbar'))
+                    @section('navbar', ['renderer' => 'navbar'])
+            @endif
+        </ul>
+        <div class="uk-panel ">
+            <a class="uk-button uk-button-primary" href="http://www.pagekit.me">
+                首页
+            </a>
+        </div>
+    </div>
+</div>
+        
+    </body>
+</html>

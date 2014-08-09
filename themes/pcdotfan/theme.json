@@ -1,0 +1,15 @@
+{
+    "name": "pcdotfan",
+    "version": "0.0.1",
+    "type": "theme",
+    "title": "PCDotFan",
+    "description": "",
+    "license": "",
+    "authors": [
+        {
+            "name": "PCDotFan",
+            "email": "admin@mywpku.com",
+            "homepage": "http://www.mywpku.com"
+        }
+    ]
+}
