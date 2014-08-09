@@ -10,9 +10,9 @@ return [
 
         'timezone' => 'UTC',
 
-        'locale' => 'en_US',
+        'locale' => 'zh_CN',
 
-        'locale_admin' => 'en_US',
+        'locale_admin' => 'zh_CN',
 
         'storage' => '/storage',
 
@@ -111,7 +111,7 @@ return [
 
                 'driver'  => 'pdo_sqlite',
                 'path'    => '%path%/app/database/pagekit.db',
-                'charset' => 'UTF-8',
+                'charset' => 'utf8',
                 'prefix'  => ''
 
             ],

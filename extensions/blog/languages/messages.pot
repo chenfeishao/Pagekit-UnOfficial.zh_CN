@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pagekit 0.8.3 (blog, messages)\n"
-"POT-Creation-Date: 2014-07-23 14:46+0000\n"
+"POT-Creation-Date: 2014-07-21 17:08+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -9,81 +9,89 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: extensions/blog/views/post/index.razr:7
-msgid "Written by %name% on %date%"
-msgstr ""
-
-#: extensions/blog/views/post/index.razr:18
-msgid "Continue Reading"
-msgstr ""
-
-#: extensions/blog/views/post/index.razr:20
-msgid "{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments"
-msgstr ""
-
-#: extensions/blog/views/comment/comments.razr:5
-msgid "Comments (%count%)"
-msgstr ""
-
-#: extensions/blog/views/comment/comment.razr:13
-msgid "%date% at %time%"
-msgstr ""
-
-#: extensions/blog/views/comment/comment.razr:27
-#: extensions/blog/views/admin/comment/table.razr:37
-#: extensions/blog/views/admin/comment/index.razr:67
-msgid "Reply"
-msgstr ""
-
-#: extensions/blog/views/comment/respond.razr:3
-msgid "Leave a comment"
-msgstr ""
-
-#: extensions/blog/views/comment/respond.razr:11
-msgid "Logged in as %name%"
-msgstr ""
-
-#: extensions/blog/views/comment/respond.razr:15
-msgid "You are commenting as guest."
-msgstr ""
-
-#: extensions/blog/views/comment/respond.razr:23
 #: extensions/blog/views/admin/comment/edit.razr:15
+#: extensions/blog/views/comment/respond.razr:23
 msgid "E-mail"
 msgstr ""
 
-#: extensions/blog/views/comment/respond.razr:33
-msgid "Submit comment"
+#: extensions/blog/views/admin/comment/index.razr:15
+msgid "Approve"
 msgstr ""
 
-#: extensions/blog/views/comment/respond.razr:45
-msgid "You are not allowed to post comments."
+#: extensions/blog/views/admin/comment/index.razr:16
+msgid "Unapprove"
 msgstr ""
 
-#: extensions/blog/views/comment/respond.razr:49
-msgid "Please login to leave a comment."
+#: extensions/blog/views/admin/comment/index.razr:17
+msgid "Mark as spam"
 msgstr ""
 
-#: extensions/blog/views/admin/post/table.razr:8
+#: extensions/blog/views/admin/comment/index.razr:37
+msgid "No comments found."
+msgstr ""
+
+#: extensions/blog/views/admin/comment/index.razr:67
+#: extensions/blog/views/admin/comment/table.razr:37
+#: extensions/blog/views/comment/comment.razr:27
+msgid "Reply"
+msgstr ""
+
+#: extensions/blog/views/admin/comment/table.razr:6
+msgid "Comment"
+msgstr ""
+
+#: extensions/blog/views/admin/comment/table.razr:8
+msgid "In response to %post%"
+msgstr ""
+
+#: extensions/blog/views/admin/comment/table.razr:8
+msgid "In response to"
+msgstr ""
+
+#: extensions/blog/views/admin/comment/table.razr:47
+#: extensions/blog/views/admin/post/table.razr:50
+msgid "{0} No pending|{1} One pending|]1,Inf[ %comments% pending"
+msgstr ""
+
+#: extensions/blog/views/admin/link/blog.razr:5
+msgid "Posts View"
+msgstr ""
+
+#: extensions/blog/views/admin/link/blog.razr:15
+msgid "Post"
+msgstr ""
+
+#: extensions/blog/views/admin/link/blog.razr:18
+msgid "- Select Post -"
+msgstr ""
+
+#: extensions/blog/views/admin/post/edit.razr:14
+msgid "Enter Title"
+msgstr ""
+
+#: extensions/blog/views/admin/post/edit.razr:22
+msgid "Excerpt"
+msgstr ""
+
+#: extensions/blog/views/admin/post/edit.razr:24
+msgid "Enter Excerpt"
+msgstr ""
+
 #: extensions/blog/views/admin/post/edit.razr:43
+#: extensions/blog/views/admin/post/table.razr:8
 msgid "Author"
 msgstr ""
 
-#: extensions/blog/views/admin/post/table.razr:9
-#: extensions/blog/views/admin/settings.razr:16
-#: extensions/blog/views/admin/settings.razr:67
-#: extensions/blog/views/admin/settings.razr:69
-#: extensions/blog/src/Controller/CommentController.php:106
-msgid "Comments"
+#: extensions/blog/views/admin/post/edit.razr:53
+msgid "Publish on"
 msgstr ""
 
-#: extensions/blog/views/admin/post/table.razr:10
-msgid "Date"
+#: extensions/blog/views/admin/post/edit.razr:73
+msgid "Slug"
 msgstr ""
 
-#: extensions/blog/views/admin/post/table.razr:50
-#: extensions/blog/views/admin/comment/table.razr:47
-msgid "{0} No pending|{1} One pending|]1,Inf[ %comments% pending"
+#: extensions/blog/views/admin/post/edit.razr:96
+msgid "Enable Comments"
 msgstr ""
 
 #: extensions/blog/views/admin/post/index.razr:8
@@ -103,56 +111,16 @@ msgstr ""
 msgid "No posts found."
 msgstr ""
 
-#: extensions/blog/views/admin/post/edit.razr:14
-msgid "Enter Title"
+#: extensions/blog/views/admin/post/table.razr:9
+#: extensions/blog/views/admin/settings.razr:16
+#: extensions/blog/views/admin/settings.razr:67
+#: extensions/blog/views/admin/settings.razr:69
+#: extensions/blog/src/Controller/CommentController.php:106
+msgid "Comments"
 msgstr ""
 
-#: extensions/blog/views/admin/post/edit.razr:22
-msgid "Excerpt"
-msgstr ""
-
-#: extensions/blog/views/admin/post/edit.razr:24
-msgid "Enter Excerpt"
-msgstr ""
-
-#: extensions/blog/views/admin/post/edit.razr:53
-msgid "Publish on"
-msgstr ""
-
-#: extensions/blog/views/admin/post/edit.razr:73
-msgid "Slug"
-msgstr ""
-
-#: extensions/blog/views/admin/post/edit.razr:96
-msgid "Enable Comments"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/table.razr:6
-msgid "Comment"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/table.razr:8
-msgid "In response to %post%"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/table.razr:8
-msgid "In response to"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/index.razr:15
-msgid "Approve"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/index.razr:16
-msgid "Unapprove"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/index.razr:17
-msgid "Mark as spam"
-msgstr ""
-
-#: extensions/blog/views/admin/comment/index.razr:37
-msgid "No comments found."
+#: extensions/blog/views/admin/post/table.razr:10
+msgid "Date"
 msgstr ""
 
 #: extensions/blog/views/admin/settings.razr:15
@@ -240,24 +208,72 @@ msgstr ""
 msgid "levels deep."
 msgstr ""
 
-#: extensions/blog/views/admin/link/blog.razr:5
-msgid "Posts View"
+#: extensions/blog/views/comment/comment.razr:13
+msgid "%date% at %time%"
 msgstr ""
 
-#: extensions/blog/views/admin/link/blog.razr:15
-msgid "Post"
+#: extensions/blog/views/comment/comments.razr:5
+msgid "Comments (%count%)"
 msgstr ""
 
-#: extensions/blog/views/admin/link/blog.razr:18
-msgid "- Select Post -"
+#: extensions/blog/views/comment/respond.razr:3
+msgid "Leave a comment"
 msgstr ""
 
-#: extensions/blog/src/Event/RouteListener.php:81
-msgid "Post with id \"%id%\" not found!"
+#: extensions/blog/views/comment/respond.razr:11
+msgid "Logged in as %name%"
 msgstr ""
 
-#: extensions/blog/src/Event/RouteListener.php:106
-msgid "Post with slug \"%slug%\" not found!"
+#: extensions/blog/views/comment/respond.razr:15
+msgid "You are commenting as guest."
+msgstr ""
+
+#: extensions/blog/views/comment/respond.razr:33
+msgid "Submit comment"
+msgstr ""
+
+#: extensions/blog/views/comment/respond.razr:45
+msgid "You are not allowed to post comments."
+msgstr ""
+
+#: extensions/blog/views/comment/respond.razr:49
+msgid "Please login to leave a comment."
+msgstr ""
+
+#: extensions/blog/views/post/index.razr:7
+msgid "Written by %name% on %date%"
+msgstr ""
+
+#: extensions/blog/views/post/index.razr:18
+msgid "Continue Reading"
+msgstr ""
+
+#: extensions/blog/views/post/index.razr:20
+msgid "{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments"
+msgstr ""
+
+#: extensions/blog/src/BlogExtension.php:39
+msgid "You've made some changes! Leaving the post without saving will discard all changes."
+msgstr ""
+
+#: extensions/blog/src/Controller/CommentController.php:106
+msgid "Comments on %title%"
+msgstr ""
+
+#: extensions/blog/src/Controller/CommentController.php:157
+msgid "Comment saved."
+msgstr ""
+
+#: extensions/blog/src/Controller/CommentController.php:157
+msgid "Comment created."
+msgstr ""
+
+#: extensions/blog/src/Controller/CommentController.php:177
+msgid "{0} No comment deleted.|{1} Comment deleted.|]1,Inf[ Comments deleted."
+msgstr ""
+
+#: extensions/blog/src/Controller/CommentController.php:196
+msgid "{0} No comment status updated.|{1} Comment status updated.|]1,Inf[ Comment statuses updated."
 msgstr ""
 
 #: extensions/blog/src/Controller/PostController.php:93
@@ -329,24 +345,16 @@ msgstr ""
 msgid "Unable to access this post!"
 msgstr ""
 
-#: extensions/blog/src/Controller/CommentController.php:106
-msgid "Comments on %title%"
+#: extensions/blog/src/Entity/Comment.php:114
+msgid "Approved"
 msgstr ""
 
-#: extensions/blog/src/Controller/CommentController.php:157
-msgid "Comment saved."
+#: extensions/blog/src/Entity/Comment.php:115
+msgid "Pending"
 msgstr ""
 
-#: extensions/blog/src/Controller/CommentController.php:157
-msgid "Comment created."
-msgstr ""
-
-#: extensions/blog/src/Controller/CommentController.php:177
-msgid "{0} No comment deleted.|{1} Comment deleted.|]1,Inf[ Comments deleted."
-msgstr ""
-
-#: extensions/blog/src/Controller/CommentController.php:196
-msgid "{0} No comment status updated.|{1} Comment status updated.|]1,Inf[ Comment statuses updated."
+#: extensions/blog/src/Entity/Comment.php:116
+msgid "Spam"
 msgstr ""
 
 #: extensions/blog/src/Entity/Post.php:169
@@ -365,19 +373,11 @@ msgstr ""
 msgid "Pending Review"
 msgstr ""
 
-#: extensions/blog/src/Entity/Comment.php:114
-msgid "Approved"
+#: extensions/blog/src/Event/RouteListener.php:81
+msgid "Post with id \"%id%\" not found!"
 msgstr ""
 
-#: extensions/blog/src/Entity/Comment.php:115
-msgid "Pending"
-msgstr ""
-
-#: extensions/blog/src/Entity/Comment.php:116
-msgid "Spam"
-msgstr ""
-
-#: extensions/blog/src/BlogExtension.php:39
-msgid "You've made some changes! Leaving the post without saving will discard all changes."
+#: extensions/blog/src/Event/RouteListener.php:106
+msgid "Post with slug \"%slug%\" not found!"
 msgstr ""
 

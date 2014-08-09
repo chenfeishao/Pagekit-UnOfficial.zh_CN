@@ -1,11 +1,17 @@
 @foreach ($posts as $post)
 <article class="uk-article">
 
-    <h1 class="uk-article-title"><a href="@url('@blog/id', ['id' => $post.id])">@($post.title)</a></h1>
+    <h1 class="uk-article-title uk-text-center"><a href="@url('@blog/id', ['id' => $post.id])">@($post.title)</a></h1>
+    <ul class="uk-article-meta uk-text-center uk-subnav uk-subnav-line">
+            <li class="uk-text-middle"><img class="uk-border-circle uk-margin-small-right" width="30" height="30" alt="" data-avatar="@( $post.user.email )"> By @($post.user.name)</li>
+            <li class="uk-text-middle"><time datetime="@(date($post.date))">@(date($post.date))</time></li>
+            <li class="uk-text-middle">
+            @if ($post.isCommentable || $post.commentCount)
+            <a href="@url('@blog/id#comments', ['id' => $post.id])">@transchoice('{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments', $post.commentCount, ['%num%' => $post.commentCount])</a>
+            @endif
+            </li>
+    </ul>
 
-    <p class="uk-article-meta">
-        @trans('Written by %name% on %date%', ['%name%' => $post.user.name, '%date%' => '<time datetime="'.date($post.date, 'Y-m-d H:i:s').'">'.date($post.date).'</time>' ])
-    </p>
 
     @if ($post.excerpt)
     <div>@raw($post.excerpt)</div>
@@ -13,14 +19,11 @@
     <div>@raw($post.content)</div>
     @endif
 
-    <ul class="uk-subnav uk-subnav-line">
-        @if ($post.readmore)
-        <li><a href="@url('@blog/id', ['id' => $post.id])">@trans('Continue Reading')</a></li>
-        @endif
-        @if ($post.isCommentable || $post.commentCount)
-        <li><a href="@url('@blog/id#comments', ['id' => $post.id])">@transchoice('{0} No comments|{1} %num% Comment|]1,Inf[ %num% Comments', $post.commentCount, ['%num%' => $post.commentCount])</a></li>
-        @endif
-    </ul>
-
+    <p class="uk-text-center">
+    @if ($post.readmore)
+    <a class="uk-button" href="@url('@blog/id', ['id' => $post.id])">@trans('Continue Reading')</a>
+    @endif
+    </p>
+ 
 </article>
 @endforeach

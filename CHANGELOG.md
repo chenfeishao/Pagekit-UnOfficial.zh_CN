@@ -1,5 +1,10 @@
 # Changelog
 
+### WIP
+
+- Beautified system emails
+- Added admin theme font subset latin, latin-ext
+
 ### 0.8.4 (July 25, 2014)
 
 - Added Finnish, French, Spanish, Russian translation

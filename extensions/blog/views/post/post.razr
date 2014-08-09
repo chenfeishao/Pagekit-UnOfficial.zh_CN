@@ -1,6 +1,6 @@
 <article class="uk-article">
 
-    <h1 class="uk-article-title">@( $post.title )</h1>
+    <h1 class="uk-article-title uk-text-center">@( $post.title )</h1>
 
     <div>@raw( $post.content )</div>
 

@@ -1,19 +1,20 @@
+#
+# Translators:
+# Weiyu Weng <467055732@qq.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: PageKit zh_CN\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-06 14:52+0000\n"
-"PO-Revision-Date: 2014-07-20 20:29+0800\n"
-"Last-Translator: Deamwork <master@deamwork.com>\n"
-"Language-Team: DeamworkTech. & MYWPKu.com\n"
-"Language: zh_Hans_CN\n"
+"Project-Id-Version: Pagekit CMS\n"
+"POT-Creation-Date: 2013-11-06 15:49+0000\n"
+"PO-Revision-Date: 2014-08-09 16:36+0800\n"
+"Last-Translator: PCDotFan <admin@mywpku.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/pagekit-"
+"cms/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.2\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: .\n"
+"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.7\n"
 
 #: extensions/installer/src/Pagekit/Installer/Controller/InstallerController.php:18
 #: extensions/installer/theme/templates/template.blade.php:5
@@ -50,11 +51,11 @@ msgstr "请完成数据库信息的填写"
 
 #: extensions/installer/views/install.blade.php:30
 msgid "Hostname"
-msgstr "主机域名"
+msgstr "服务器地址"
 
 #: extensions/installer/views/install.blade.php:33
 msgid "Host cannot be blank."
-msgstr "主机域名不能为空"
+msgstr "服务器地址不能为空"
 
 #: extensions/installer/views/install.blade.php:41
 msgid "User cannot be blank."
@@ -91,8 +92,8 @@ msgid "Username cannot be blank."
 msgstr "用户名不能为空"
 
 #: extensions/installer/views/install.blade.php:93
-msgid "Field must be a valid email adress."
-msgstr "请输入正确的E-mail地址"
+msgid "Field must be a valid email address."
+msgstr "此字段必须为一个有效的 Email 地址。"
 
 #: extensions/installer/views/install.blade.php:102
 msgid "Password cannot be blank."
